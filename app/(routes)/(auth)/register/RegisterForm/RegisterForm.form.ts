@@ -20,17 +20,3 @@ export const formSchema = z
   })
 
 
-  model estudiante {
-  id              Int       @id @default(autoincrement())
-  nombre          String    @db.VarChar(100)
-  apellidopaterno String    @db.VarChar(100)
-  apellidomaterno String    @db.VarChar(100)
-  tipodocumento   String    @db.VarChar(5)
-  numerodocumento String    @db.VarChar(15)
-  direccion       String    @db.VarChar(100)
-  fechanacimiento DateTime? @db.Date
-  email           String    @db.VarChar(100)
-  celular         String    @db.VarChar(9)
-  idcargo         Int?
-  usuario         usuario?  @relation(fields: [idcargo], references: [id], onDelete: NoAction, onUpdate: NoAction)
-}
