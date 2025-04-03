@@ -31,7 +31,7 @@ import { UserNetflix } from "@prisma/client";
 export default function Profiles(props: ProfilesProps) {
       
       const { users } = props
-      const {chageCurrentUser, currentUser} = UseCurrentNerflixUser()
+      const {chageCurrentUser} = UseCurrentNerflixUser()
    
       
       const [manageProfiles, setmanageProfiles] = useState(false)
@@ -54,7 +54,7 @@ export default function Profiles(props: ProfilesProps) {
                    })
             } catch (error) {
                   console.log(error)
-                  toast({title:"Ops! Ha ocurrido un error", variant: "Destructive"})
+                  toast({title:"Ops! Ha ocurrido un error"})
                   
             }
        }
