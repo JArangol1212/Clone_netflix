@@ -3,6 +3,8 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import { db } from "./lib/db"
 import authConfig from "./auth.config"
 
+// Extend the User type to include customField
+
 
 
 
@@ -17,7 +19,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                   session.user.id=token.sub
                  }
 
-                 session.user.customField=token.customField
+            //      session.user.customField=token.customField
                  return session
             },
             async jwt({token}){

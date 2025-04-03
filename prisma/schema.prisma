@@ -44,7 +44,7 @@ model PopularMovie {
   id           String @id @default(cuid())
   title        String
   thumbnailUrl String
-  genre        String
+  genre        String[]
   age          String
   duration     String
   trailerVideo String

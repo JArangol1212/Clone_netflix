@@ -1,5 +1,6 @@
 export interface FilmGenresProps {
 
-      genres:string;
+      genres:string[];
+      
 }
 ;

@@ -51,7 +51,7 @@ export function FormAddProfile(props: FormAddProfileProps) {
                   setIsLoading(true)
                   const response = await axios.post("/api/userNetflix",values)
                   if(response.status !==200){
-                        toast({title :"Ops! Ha ocurrido un error", variant:"destructor"})
+                        toast({title :"Ops! Ha ocurrido un error" })
                   }else {
                         toast({
                               title:"!Usuario creado correctamente!"
